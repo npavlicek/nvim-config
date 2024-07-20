@@ -16,7 +16,7 @@ return {
 		end,
 	},
 	--]]
-  {
+  --[[{
     'EdenEast/nightfox.nvim',
     priority = 1000,
     config = function()
@@ -26,6 +26,12 @@ return {
         },
       }
       vim.cmd.colorscheme 'carbonfox'
+    end,
+  },--]]
+  {
+    'morhetz/gruvbox',
+    config = function()
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
   -- Github Copilot
