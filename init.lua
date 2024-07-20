@@ -202,12 +202,11 @@ require('lazy').setup({
         { '<leader>t_', hidden = true },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>w_', hidden = true },
+        { '<leader>h', desc = 'Git [H]unk', mode = { 'v', 'n' } },
       }
 
       -- visual mode
-      require('which-key').add {
-        { '<leader>h', desc = 'Git [H]unk', mode = 'v' },
-      }
+      require('which-key').add {}
     end,
   },
 
