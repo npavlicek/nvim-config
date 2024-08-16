@@ -7,15 +7,32 @@ return {
       require('lsp_signature').setup(opts)
     end,
   },
-  --[[
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			vim.cmd.colorscheme("rose-pine")
-		end,
-	},
-	--]]
+  {
+    'scottmckendry/cyberdream.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('cyberdream').setup {
+        transparent = true,
+        borderless_telescope = true,
+        terminal_colors = true,
+      }
+      vim.cmd.colorscheme 'cyberdream'
+    end,
+  },
+  --[[{
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    config = function()
+      require('rose-pine').setup {
+        styles = {
+          bold = true,
+          italic = true,
+        },
+      }
+      vim.cmd.colorscheme 'rose-pine'
+    end,
+  },--]]
   --[[{
     'EdenEast/nightfox.nvim',
     priority = 1000,
@@ -28,7 +45,7 @@ return {
       vim.cmd.colorscheme 'carbonfox'
     end,
   },--]]
-  {
+  --[[ {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
     config = function()
@@ -37,7 +54,7 @@ return {
       }
       vim.cmd.colorscheme 'gruvbox'
     end,
-  },
+  }, --]]
   --[[{
     'morhetz/gruvbox',
     config = function()
