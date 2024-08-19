@@ -795,6 +795,8 @@ require('lazy').setup({
   },
 })
 
+require('lsp_signature').setup {}
+
 local harpoon = require 'harpoon'
 harpoon:setup()
 
